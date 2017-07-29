@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context="com.wanching.midterm.MainActivity">
+
+    <TextView
+        android:text="pick your flavour colours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+    </Spinner>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <RadioButton
+            android:id="@+id/burger"
+            android:text="burger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="foodSelection"/>
+        <RadioButton
+            android:id="@+id/pizza"
+            android:text="pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="foodSelection"/>
+        <RadioButton
+            android:id="@+id/fries"
+            android:text="fries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="foodSelection"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/lemon"
+        android:text="lemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fruitSelection"/>
+
+    <CheckBox
+        android:id="@+id/orange"
+        android:text="orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fruitSelection"/>
+
+    <CheckBox
+        android:id="@+id/grape"
+        android:text="grape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fruitSelection"/>
+
+    <Button
+        android:id="@+id/date_selection"
+        android:text="select a date"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/time_selection"
+        android:text="select a time"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MidTerm</string>
+
+    <string-array name="colourArray">
+        <item>blue</item>
+        <item>green</item>
+        <item>red</item>
+    </string-array>
+</resources>
