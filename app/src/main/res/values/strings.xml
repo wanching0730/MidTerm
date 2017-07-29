@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MidTerm</string>
+    <string name="chooser_title">select one option</string>
 
     <string-array name="colourArray">
         <item>blue</item>

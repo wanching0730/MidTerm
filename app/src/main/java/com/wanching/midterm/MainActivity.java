@@ -1,5 +1,6 @@
 package com.wanching.midterm;
 
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.Checkable;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spinner;
     private Button btnDate;
     private Button btnTime;
+    private Button btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,25 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 DialogFragment fragment = new TimePickerFragment();
                 fragment.show(getSupportFragmentManager(), "time picker");
+            }
+        });
+
+        btnNext = (Button) findViewById(R.id.btnNext);
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText etMessage = (EditText) findViewById(R.id.message);
+                String message = etMessage.getText().toString();
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_TEXT, message);
+
+                String chooserTitle = getResources().getString(R.string.chooser_title);
+                Intent chooser = Intent.createChooser(intent, chooserTitle);
+
+                if(intent.resolveActivity(getPackageManager()) != null)
+                    startActivity(chooser);
+
             }
         });
 
