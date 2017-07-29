@@ -76,11 +76,16 @@ public class MainActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle bundle = new Bundle();
                 EditText etMessage = (EditText) findViewById(R.id.message);
+                EditText etNumber = (EditText) findViewById(R.id.number);
                 String message = etMessage.getText().toString();
+                String number = etNumber.getText().toString();
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_TEXT, message);
+                bundle.putString("message", message);
+                bundle.putString("number", number);
+                intent.putExtras(bundle);
 
                 String chooserTitle = getResources().getString(R.string.chooser_title);
                 Intent chooser = Intent.createChooser(intent, chooserTitle);

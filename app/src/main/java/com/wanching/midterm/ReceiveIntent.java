@@ -14,9 +14,12 @@ public class ReceiveIntent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receive_intent);
 
-        String message = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+        Bundle bundle = new Bundle();
+        bundle = getIntent().getExtras();
+        String message = bundle.getString("message");
+        String number= bundle.getString("number");
         etMessage = (EditText) findViewById(R.id.received_message);
-        etMessage.setText(message);
+        etMessage.setText(message + " , " + number);
 
 
     }
