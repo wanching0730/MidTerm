@@ -17,8 +17,7 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp">
+        android:layout_height="wrap_content">
     </Spinner>
 
     <RadioGroup
@@ -79,7 +78,6 @@
     <Button
         android:id="@+id/date_selection"
         android:text="select a date"
-        android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="false"/>
@@ -92,7 +90,6 @@
     <Button
         android:id="@+id/time_selection"
         android:text="select a time"
-        android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="false"/>
@@ -111,23 +108,32 @@
             android:id="@+id/message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
             android:inputType="text"/>
 
         <EditText
             android:id="@+id/number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
             android:inputType="text"/>
 
         <Button
             android:id="@+id/btnNext"
             android:text="To next page"
             android:layout_width="wrap_content"
-            android:layout_margin="16dp"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/open_url"
+        android:text="open url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/past_year"
+        android:text="past year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

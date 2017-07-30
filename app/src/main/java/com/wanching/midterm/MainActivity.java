@@ -1,6 +1,7 @@
 package com.wanching.midterm;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnDate;
     private Button btnTime;
     private Button btnNext;
+    private Button btnUrl;
+    private Button btnPastYear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +99,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnUrl = (Button) findViewById(R.id.open_url);
+        btnUrl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.youtube.com"));
+                if(intent.resolveActivity(getPackageManager()) != null)
+                    startActivity(intent);
+            }
+        });
+
+        btnPastYear = (Button) findViewById(R.id.past_year);
+        btnPastYear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), RelativeLayout.class);
+                if(intent.resolveActivity(getPackageManager()) != null)
+                    startActivity(intent);
+            }
+        });
 
 
     }

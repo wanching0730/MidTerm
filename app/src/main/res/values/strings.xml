@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">MidTerm</string>
     <string name="chooser_title">select one option</string>
+    <string name="spinnertitle">gender</string>
 
     <string-array name="colourArray">
         <item>blue</item>
         <item>green</item>
         <item>red</item>
+    </string-array>
+
+    <string-array
+        name="gender">
+        <item>male</item>
+        <item>female</item>
     </string-array>
 </resources>
